@@ -11,8 +11,8 @@ import static org.junit.Assert.assertTrue;
 public class RegistrationPage extends InsureTrevelPage {
 
     public RegistrationPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(this.driver, RegistrationPage.class);
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
 
     @FindBy(name = "insured0_surname")

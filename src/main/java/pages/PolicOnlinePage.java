@@ -8,11 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 public class PolicOnlinePage extends StartPage {
 
     public PolicOnlinePage (WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(this.driver, PolicOnlinePage.class);
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
 
     }
-    @FindBy(xpath = "//a[contains(text(),'Узнать подробнее')][3]")
+    @FindBy(xpath = "//p[6]/a[contains(text(),'Узнать подробнее')]")
     private WebElement knowMore;
 
     public WebElement getKnowMore() {

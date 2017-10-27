@@ -11,8 +11,8 @@ public class TravelPolicPage extends StartPage {
     private WebElement SelectOntinePolic;
 
     public TravelPolicPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(this.driver, TravelPolicPage.class);
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
 
     public WebElement getSelectOntinePolic() {

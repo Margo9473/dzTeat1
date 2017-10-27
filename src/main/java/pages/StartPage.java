@@ -16,8 +16,11 @@ public class StartPage extends BasePages {
 
     public StartPage(WebDriver driver) {
 
-        PageFactory.initElements(this.driver, StartPage.class);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
+    }
+
+    public StartPage() {
     }
 
 
